@@ -15,8 +15,8 @@ public class TypingManager : MonoBehaviour
 {
     [SerializeField] private Question[] questions;
 
-    [SerializeField] private Text textJapanese; // ここに日本語表示のTextMeshProをアタッチする。
-    [SerializeField] private Text textRoman; // ここにローマ字表示のTextMeshProをアタッチする。
+    [SerializeField] private TextMeshPro textJapanese; // ここに日本語表示のTextMeshProをアタッチする。
+    [SerializeField] private TextMeshPro textRoman; // ここにローマ字表示のTextMeshProをアタッチする。
 
     private readonly List<char> _roman = new List<char>();
 

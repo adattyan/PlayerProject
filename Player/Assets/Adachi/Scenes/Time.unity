@@ -200,9 +200,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 604861871}
-  - component: {fileID: 604861873}
-  - component: {fileID: 604861872}
   - component: {fileID: 604861874}
+  - component: {fileID: 604861872}
+  - component: {fileID: 604861873}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged

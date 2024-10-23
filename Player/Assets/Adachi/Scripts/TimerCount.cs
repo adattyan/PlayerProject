@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class TimerCount : MonoBehaviour
 {
-    [SerializeField] float time = 60;   //ŠÔ
-    [SerializeField] GameObject TimerObject;  //ƒQ[ƒ€ƒIƒuƒWƒFƒNƒg
+    [SerializeField] float time = 60;   //ã‚¿ã‚¤ãƒãƒ¼
+    [SerializeField] GameObject TimerObject;  //ã‚¿ã‚¤ãƒãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
     Text timertext;
     // Start is called before the first frame update
     void Start()
@@ -17,27 +17,31 @@ public class TimerCount : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(TimerObject);
-        Debug.Log(timertext);
         Count();
     }
 
     /// <summary>
-    /// ‰Šúİ’è
+    /// åˆæœŸè¨­å®š
     /// </summary>
     void StartUp()
     {
-        TimerObject = GetComponent<GameObject>();
         timertext = TimerObject.GetComponent<Text>();
     }
 
     /// <summary>
-    /// ŠÔ‚ğŒv‘ª
+    /// æ™‚é–“ã‚’è¨ˆæ¸¬
     /// </summary>
     void Count()
     {
-        time -= Time.deltaTime;
-        timertext.text = "‚ ‚Æ" + time.ToString("00.00") + "•b";
-        
+        if(time <= 60)
+        {
+            time -= Time.deltaTime;
+            timertext.text = "æ®‹ã‚Š" + time.ToString("00.00") + "ç§’";
+        }
+        if(time < 0)
+        {
+            time = 0;
+            timertext.text = "çµ‚äº†ï¼";
+        }
     }
 }

@@ -659,6 +659,8 @@ MonoBehaviour:
   questions:
   - japanese: "\u6D41\u661F\u7FA4"
     roman: ryuuseigun
+  - japanese: "\u30AC\u30F3\u30C0\u30E0"
+    roman: gamdamu
   textJapanese: {fileID: 0}
   textRoman: {fileID: 0}
 --- !u!1 &1866713378
